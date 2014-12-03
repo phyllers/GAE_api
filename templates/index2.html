@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1>Hello World!</h1>
+
+{% if data %}
+    <ul>
+        {% for item in data %}
+            <li>{{ item.id }}: {{ item.content }}, {{ item.date }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<h2>Retrieved data from CloudSQL</h2>
+{% if json %}
+    <code>
+        {{ json }}
+    </code>
+
+{% else %}
+    No Data retrieved
+{% endif %}
+
+</body>
+</html>
